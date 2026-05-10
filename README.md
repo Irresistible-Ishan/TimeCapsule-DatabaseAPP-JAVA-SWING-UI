@@ -1,5 +1,5 @@
 # TimeCapsule-DatabaseAPP-JAVA-SWING-UI
-This is a notes app ;P or maybe not ? it has great potential , im making this for personal use as an open source tool , if its good u can use it too.
+This is a notes app ;P or maybe not ? it has great potential , im making this for personal use as an open source tool , if its good u can use it too. Not your avg electron or webapp ;)
 
 # features :
 * **Burn**: Permanently destroys the file from the local SSD or HDD by overwriting the storage sectors with randomized binary data, making recovery virtually impossible, even with advanced forensic tools.
