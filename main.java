@@ -12,7 +12,7 @@ class createFrame{
         frame.setLayout(null);
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setVisible(true);
+        frame.setVisible(true);
         return frame;
     }
     public JPanel createPanelFunction(JFrame frame,int x , int y , int sizex , int sizey){
@@ -26,11 +26,11 @@ class createFrame{
 }
 
 class showTxtImg{
-    public JLabel putText(JFrame frame ,String text , int posx , int posy , int sizex , int sizey , String setFont , boolean boldOrNot , int size){
+    public JLabel putText(JPanel panel ,String text , int posx , int posy , int sizex , int sizey , String setFont , boolean boldOrNot , int size){
         JLabel l = new JLabel(text);
         l.setBounds(posx, posy , sizex, sizey);
         l.setHorizontalAlignment(JLabel.CENTER);
-        frame.add(l);
+        panel.add(l);
         return l;
     }
 }
@@ -40,11 +40,12 @@ class TimeCapsule{
         createFrame cf = new createFrame();
         JFrame frame = cf.createFrameFunction("TimeCapsule" , 800 , 600 , 200 , 100);
         JPanel panel = cf.createPanelFunction(frame,100,0 , 700 , 600);
+        panel.setBackground(Color.LIGHT_GRAY);
         showTxtImg sti = new showTxtImg();
-        JLabel title = sti.putText(frame , "CODE7X NOTES" , 100 , 0 , 200 , 50 , "Arial" , true , 28);
+        JLabel title = sti.putText(panel , "CODE7X NOTES" , 100 , 0 , 200 , 50 , "Arial" , true , 28);
         title.setForeground(Color.BLACK);
-        title.setBackground(Color.WHITE);
-        frame.setVisible(true);
+        title.setBackground(Color.YELLOW);
+
 
 
 
