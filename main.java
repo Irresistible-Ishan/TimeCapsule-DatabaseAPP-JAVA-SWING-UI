@@ -12,8 +12,16 @@ class createFrame{
         frame.setLayout(null);
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        //frame.setVisible(true);
         return frame;
+    }
+    public JPanel createPanelFunction(JFrame frame,int x , int y , int sizex , int sizey){
+        JPanel panel = new JPanel();
+        panel.setBounds(x,y,sizex, sizey);
+        panel.setLayout(null);
+        panel.setVisible(true);
+        frame.add(panel);
+        return panel;
     }
 }
 
@@ -31,10 +39,12 @@ class TimeCapsule{
     public static void main(String args[]){
         createFrame cf = new createFrame();
         JFrame frame = cf.createFrameFunction("TimeCapsule" , 800 , 600 , 200 , 100);
+        JPanel panel = cf.createPanelFunction(frame,100,0 , 700 , 600);
         showTxtImg sti = new showTxtImg();
-        JLabel title = sti.putText(frame , "CODE7X NOTES" , 0 , 0 , 100 , 50 , "Arial" , true , 28);
+        JLabel title = sti.putText(frame , "CODE7X NOTES" , 100 , 0 , 200 , 50 , "Arial" , true , 28);
         title.setForeground(Color.BLACK);
         title.setBackground(Color.WHITE);
+        frame.setVisible(true);
 
 
 
