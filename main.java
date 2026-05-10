@@ -25,6 +25,19 @@ class createFrame{
     }
 }
 
+class Btn{
+    public JButton addbtn(Container frameOrPanel , String text , String hoverText , int x , int y , int sizex , int sizey){
+        JButton jbtn = new JButton();
+        jbtn.setText(text);
+        jbtn.setBounds(x,y,sizex,sizey);
+        jbtn.setFocusable(true);
+        jbtn.setEnabled(true);
+        jbtn.setToolTipText(hoverText);
+        frameOrPanel.add(jbtn);
+        return jbtn;
+    }
+}
+
 class showTxtImg{
     public JLabel putText(JPanel panel ,String text , int posx , int posy , int sizex , int sizey , String setFont , boolean boldOrNot , int size){
         JLabel l = new JLabel(text);
@@ -45,6 +58,13 @@ class TimeCapsule{
         JLabel title = sti.putText(panel , "CODE7X NOTES" , 100 , 0 , 200 , 50 , "Arial" , true , 28);
         title.setForeground(Color.BLACK);
         title.setBackground(Color.YELLOW);
+        Btn btn = new Btn();
+        JButton importbtn = btn.addbtn(frame,"Import" , "Import Text from filetype" ,0 , 0 ,100 ,50);
+        JButton exportbtn = btn.addbtn(frame,"Export" , "Import Text from filetype" ,0 , 50 ,100 ,50);
+        JButton savebtn = btn.addbtn(frame,"Save" , "Import Text from filetype" ,0 , 100 ,100 ,50);
+        JButton burnbtn = btn.addbtn(frame,"Burn" , "Import Text from filetype" ,0 , 150 ,100 ,50);
+        JButton eleminatebtn = btn.addbtn(frame,"Eleminate" , "Import Text from filetype" ,0 , 200 ,100 ,50);
+        JButton newbtn = btn.addbtn(frame,"New" , "Import Text from filetype" ,0 , 250 ,100 ,50);
 
 
 
