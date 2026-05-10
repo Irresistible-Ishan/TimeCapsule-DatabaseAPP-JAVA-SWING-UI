@@ -28,7 +28,11 @@ class createFrame{
 class Btn{
     public JButton addbtn(Container frameOrPanel , String text , String hoverText , int x , int y , int sizex , int sizey){
         JButton jbtn = new JButton();
+        ImageIcon btnskin = new ImageIcon("./assets/buttons/button-main.png");
         jbtn.setText(text);
+        jbtn.setIcon(btnskin);
+        jbtn.setHorizontalTextPosition(JButton.CENTER);
+        jbtn.setVerticalTextPosition(JButton.CENTER);
         jbtn.setBounds(x,y,sizex,sizey);
         jbtn.setFocusable(true);
         jbtn.setEnabled(true);
@@ -65,7 +69,8 @@ class TimeCapsule{
         JButton burnbtn = btn.addbtn(frame,"Burn" , "Import Text from filetype" ,0 , 150 ,100 ,50);
         JButton eleminatebtn = btn.addbtn(frame,"Eleminate" , "Import Text from filetype" ,0 , 200 ,100 ,50);
         JButton newbtn = btn.addbtn(frame,"New" , "Import Text from filetype" ,0 , 250 ,100 ,50);
-
+        JButton openbtn = btn.addbtn(frame,"New" , "Import Text from filetype" ,0 , 300 ,100 ,50);
+        
 
 
 
