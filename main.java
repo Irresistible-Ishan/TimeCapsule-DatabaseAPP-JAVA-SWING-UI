@@ -13,7 +13,6 @@ class createFrame{
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setBackground(Color.BLACK);
         return frame;
     }
     public JPanel createPanelFunction(JFrame frame,int x , int y , int sizex , int sizey){
@@ -73,7 +72,8 @@ class TimeCapsule{
         createFrame cf = new createFrame();
         JFrame frame = cf.createFrameFunction("TimeCapsule" , 800 , 600 , 200 , 100);
         JPanel panel = cf.createPanelFunction(frame,100,30 , 665 , 510);
-        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setBackground(Color.decode("#215B63"));
+        frame.setBackground(Color.decode("#67C090"));
         showTxtImg sti = new showTxtImg();
         JLabel title = sti.putText(frame , "TIMECAPSULE NOTES" , 100 , 0 , 665 , 30 , "Monospaced" , true , 32);
         title.setForeground(Color.BLACK);
