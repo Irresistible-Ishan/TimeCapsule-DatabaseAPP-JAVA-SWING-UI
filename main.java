@@ -24,7 +24,6 @@ class createFrame{
         return panel;
     }
 }
-
 class Btn{
     public JButton addbtn(Container frameOrPanel , String text , String hoverText , int x , int y , int sizex , int sizey){
         JButton jbtn = new JButton();
@@ -41,7 +40,6 @@ class Btn{
         return jbtn;
     }
 }
-
 class showTxtImg{
     public JLabel putText(JPanel panel ,String text , int posx , int posy , int sizex , int sizey , String setFont , boolean boldOrNot , int size){
         JLabel l = new JLabel(text);
@@ -51,12 +49,23 @@ class showTxtImg{
         return l;
     }
 }
-
+class textArea{
+    public JTextArea addTextInput(Container panelorframe , int x , int y , int sizex , int sizey){
+        JTextArea textarea = new JTextArea();
+        textarea.setBounds(x , y , sizex , sizey);
+        textarea.setLineWrap(true);
+        textarea.setFont(new Font("Arial" , Font.PLAIN , 20));
+        textarea.setForeground(Color.BLACK);
+        textarea.setBackground(Color.WHITE);
+        panelorframe.add(textarea);
+        return textarea;
+    }
+}
 class TimeCapsule{
     public static void main(String args[]){
         createFrame cf = new createFrame();
         JFrame frame = cf.createFrameFunction("TimeCapsule" , 800 , 600 , 200 , 100);
-        JPanel panel = cf.createPanelFunction(frame,100,0 , 700 , 600);
+        JPanel panel = cf.createPanelFunction(frame,100,0 , 1420 , 740);
         panel.setBackground(Color.LIGHT_GRAY);
         showTxtImg sti = new showTxtImg();
         JLabel title = sti.putText(panel , "CODE7X NOTES" , 100 , 0 , 200 , 50 , "Arial" , true , 28);
@@ -69,11 +78,8 @@ class TimeCapsule{
         JButton burnbtn = btn.addbtn(frame,"Burn" , "Import Text from filetype" ,0 , 150 ,100 ,50);
         JButton eleminatebtn = btn.addbtn(frame,"Eleminate" , "Import Text from filetype" ,0 , 200 ,100 ,50);
         JButton newbtn = btn.addbtn(frame,"New" , "Import Text from filetype" ,0 , 250 ,100 ,50);
-        JButton openbtn = btn.addbtn(frame,"New" , "Import Text from filetype" ,0 , 300 ,100 ,50);
-        
-
-
-
-
+        JButton openbtn = btn.addbtn(frame,"Open" , "Import Text from filetype" ,0 , 300 ,100 ,50);
+        textArea textarea = new textArea();
+        textarea.addTextInput(panel , 10 , 30 , 680 , 540);
     }
 }
