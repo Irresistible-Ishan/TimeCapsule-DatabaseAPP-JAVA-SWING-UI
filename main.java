@@ -71,9 +71,11 @@ class TimeCapsule{
     public static void main(String args[]){
         createFrame cf = new createFrame();
         JFrame frame = cf.createFrameFunction("TimeCapsule" , 800 , 600 , 200 , 100);
+        ImageIcon frameBg = new ImageIcon("./assets/frame.png");
+        JLabel frameBgg = new JLabel(frameBg);
+        frame.setContentPane(frameBgg);
         JPanel panel = cf.createPanelFunction(frame,100,30 , 665 , 510);
         panel.setBackground(Color.decode("#215B63"));
-        frame.setBackground(Color.decode("#67C090"));
         showTxtImg sti = new showTxtImg();
         JLabel title = sti.putText(frame , "TIMECAPSULE NOTES" , 100 , 0 , 665 , 30 , "Monospaced" , true , 32);
         title.setForeground(Color.BLACK);
